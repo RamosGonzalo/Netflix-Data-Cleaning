@@ -51,7 +51,6 @@ The dataset is downloaded automatically with [`kagglehub`](https://github.com/Ka
 ```
 netflix-data-cleaning/
 ├── netflix_data_cleaning.ipynb   # Cleaning process, step by step
-├── requirements.txt              # Project dependencies
 ├── README.md
 ├── .gitignore
 └── data/
