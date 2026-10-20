@@ -51,12 +51,27 @@ The dataset is downloaded automatically with [`kagglehub`](https://github.com/Ka
 ```
 netflix-data-cleaning/
 ├── netflix_data_cleaning.ipynb   # Cleaning process, step by step
+├── requirements.txt              # Project dependencies
 ├── README.md
 ├── .gitignore
 └── data/
     └── clean/
         └── netflix_clean.csv     # Final cleaned dataset
 ```
+
+## Cleaning Decisions
+
+| Column | Issue | Decision | Why |
+|---|---|---|---|
+| `director` | ~30% missing | Filled with `"Unknown"` | Dropping those rows would lose a third of the dataset, and the rest of their data is valid |
+| `cast`, `country` | ~9% missing | Filled with `"Unknown"` | Same criterion as `director`, for consistency |
+| `date_added` | 10 missing, all TV shows | Kept as `NaT` | The date can't be deduced from another column, and the rest of those rows is complete |
+| `date_added` | Stored as text | Parsed to `datetime`; added `year_added` and `month_added` | Enables time-based analysis |
+| `duration` | Minutes and seasons mixed in one text column | Split into `duration_min` (movies) and `seasons` (TV shows); original dropped | Minutes and seasons can't be averaged together |
+| `rating` / `duration` | 3 movies had their duration stored in `rating` | Moved the value to `duration`; set `rating` to `"Unknown"` | The data was in the wrong column |
+| `rating` | 4 missing, plus `NR` and `UR` meaning the same | Missing filled with `"Unknown"`; `UR` unified into `NR` | A single label per meaning |
+
+`duration_min` and `seasons` contain nulls by design: movies have no seasons and TV shows have no minutes.
 
 ## What I Practiced
 
