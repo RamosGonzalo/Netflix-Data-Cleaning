@@ -23,29 +23,6 @@ The goal is not just to drop nulls, but to understand why values are missing and
 - Pandas
 - Jupyter Notebook
 
-## Getting Started
-
-1. Clone this repository:
-
-   ```bash
-   git clone <repository-url>
-   cd netflix-data-cleaning
-   ```
-
-2. Install the dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Open the notebook with JupyterLab and run all cells:
-
-   ```bash
-   jupyter lab netflix_data_cleaning.ipynb
-   ```
-
-The dataset is downloaded automatically with [`kagglehub`](https://github.com/Kaggle/kagglehub), so there is no need to download or unzip anything by hand.
-
 ## Project Structure
 
 ```
