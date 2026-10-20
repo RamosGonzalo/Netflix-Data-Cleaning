@@ -58,6 +58,7 @@ netflix-data-cleaning/
 - Parsing dates into proper `datetime` objects.
 - Exporting a clean dataset ready for analysis.
 
-## Data Source
+## Sources
 
-[Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows) by Shivam Bansal, available on Kaggle.
+- [Clean the Netflix Dataset](https://roadmap.sh/projects/cleaning-netflix-dataset): project brief by roadmap.sh.
+- [Netflix Movies and TV Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows): dataset by Shivam Bansal, available on Kaggle.
